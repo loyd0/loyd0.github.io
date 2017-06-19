@@ -3,19 +3,27 @@ function init() {
   let extended = false;
   $('.image-one').on('click', (e) => {
     if (extended && !$(e.currentTarget).hasClass('disable-animation')) {
-      $(e.currentTarget).removeClass('animate-width-expand-one');
-      $(e.currentTarget).addClass('animate-width-contract-one');
-      $('.title-name').animateCssIn('fadeInDown');
-      $('.column').addClass('disable-animation');
-      $('.contact-container').removeClass('off-screen');
+      setTimeout(function () {
+        $(e.currentTarget).removeClass('animate-width-expand-one');
+        $(e.currentTarget).addClass('animate-width-contract-one');
+        $('.title-name').animateCssIn('fadeInDown');
+        $('.column').addClass('disable-animation');
+        $('.contact-container').removeClass('off-screen');
+        $('#developer').animateCssIn('fadeIn');
+      }, 500);
+      $('#appended-1').animateCssOut('fadeOutQuick');
       extended = false;
     } else if (!extended && !$(e.currentTarget).hasClass('disable-animation')) {
       $(e.currentTarget).removeClass('animate-width-contract-one');
       $(e.currentTarget).addClass('animate-width-expand-one');
       $('.title-name').animateCssOut('fadeOutUp');
-      $('.column').addClass('disable-animation');
       $('.contact-container').animateCssOut('fadeOutDown');
+      $('.column').addClass('disable-animation');
       $('.image-wrapper').prepend('<div class="image-one column"></div>');
+      $('#developer').animateCssOut('fadeOut');
+      setTimeout(function () {
+        $('#appended-1').animateCssIn('fadeIn');
+      }, 900);
       extended = true;
     }
   });
@@ -38,7 +46,7 @@ function init() {
       extended = true;
     }
   });
-  
+
   $('.image-three').on('click', (e) => {
     console.log('clicked');
     if (extended && !$(e.currentTarget).hasClass('disable-animation')) {
@@ -103,7 +111,8 @@ $.fn.extend({
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     this.addClass('animated ' + animationName).one(animationEnd, function() {
       $(this).removeClass('animated ' + animationName);
-      $('.column').removeClass('animate-width-expand-one animate-width-contract-one animate-width-expand-four animate-width-contract-four animate-width-contract-two animate-width-expand-two animate-width-contract-three animate-width-expand-three3 off-screen disable-animation');
+      // $('.column').removeClass('animate-width-expand-one animate-width-contract-one animate-width-expand-four animate-width-contract-four animate-width-contract-two animate-width-expand-two animate-width-contract-three animate-width-expand-three3 off-screen disable-animation');
+      $('.column').removeClass('animate-width-contract-one animate-width-contract-four animate-width-contract-two animate-width-contract-three off-screen disable-animation');
       if ($('.image-one').length > 1) {
         $('.image-one')[0].remove();
       } else if ($('.image-two').length > 1) {
