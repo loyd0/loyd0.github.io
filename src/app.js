@@ -1,5 +1,4 @@
-$(init)
-
+$(init);
 function init() {
   let extended = false;
   $('.image-one').on('click', (e) => {
@@ -39,6 +38,7 @@ function init() {
       extended = true;
     }
   });
+  
   $('.image-three').on('click', (e) => {
     console.log('clicked');
     if (extended && !$(e.currentTarget).hasClass('disable-animation')) {
