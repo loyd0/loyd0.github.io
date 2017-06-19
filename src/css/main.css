@@ -93,18 +93,22 @@ font-size: 1.5em;
 .image-one {
   background-image: url('../imgs/code.png');
   background-position: -260px;
+  background-size: cover;
 }
 .image-two {
   background-image: url('../imgs/phones.png');
   background-position: 34%;
+  background-size: cover;
 }
 .image-three {
   background-image: url('../imgs/coast.png');
   background-position: 72.5%;
+  background-size: cover;
 }
 .image-four {
   background-image: url('../imgs/other.png');
   background-position: 90%;
+  background-size: cover;
 }
 
 /* Other Images */
