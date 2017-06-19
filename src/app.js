@@ -6,10 +6,10 @@ function init() {
       setTimeout(function () {
         $(e.currentTarget).removeClass('animate-width-expand-one');
         $(e.currentTarget).addClass('animate-width-contract-one');
-        $('.title-name').animateCssIn('fadeInDown');
+        $('.title-name').animateCssIn('fadeInDown', false);
         $('.column').addClass('disable-animation');
         $('.contact-container').removeClass('off-screen');
-        $('#developer').animateCssIn('fadeIn');
+        $('#developer').animateCssIn('fadeIn', true);
       }, 500);
       $('#appended-1').animateCssOut('fadeOutQuick');
       extended = false;
@@ -53,10 +53,10 @@ function init() {
       setTimeout(function () {
         $(e.currentTarget).removeClass('animate-width-expand-three');
         $(e.currentTarget).addClass('animate-width-contract-three');
-        $('.title-name').animateCssIn('fadeInDown');
+        $('.title-name').animateCssIn('fadeInDown', false);
         $('.column').addClass('disable-animation');
         $('.contact-container').animateCssIn('fadeIn');
-        $('#photographer').animateCssIn('fadeIn');
+        $('#photographer').animateCssIn('fadeIn', true);
       }, 500);
       $('#appended-3').animateCssOut('fadeOutQuick');
       extended = false;
@@ -106,20 +106,27 @@ $.fn.extend({
   }
 });
 $.fn.extend({
-  animateCssIn: function (animationName) {
+  animateCssIn: function (animationName, extensionBoolean) {
     $(this).removeClass('off-screen');
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     this.addClass('animated ' + animationName).one(animationEnd, function() {
       $(this).removeClass('animated ' + animationName);
       // $('.column').removeClass('animate-width-expand-one animate-width-contract-one animate-width-expand-four animate-width-contract-four animate-width-contract-two animate-width-expand-two animate-width-contract-three animate-width-expand-three3 off-screen disable-animation');
       $('.column').removeClass('animate-width-contract-one animate-width-contract-four animate-width-contract-two animate-width-contract-three off-screen disable-animation');
-      if ($('.image-one').length > 1) {
-        $('.image-one')[0].remove();
-      } else if ($('.image-two').length > 1) {
-        $('.image-two')[0].remove();
-      } else if ($('.image-three').length > 1) {
-        $('.image-three')[0].remove();
+      if (extensionBoolean === true) {
+        removeExtension();
       }
     });
   }
 });
+
+function removeExtension(){
+  if ($('.image-one').length > 1) {
+    console.log('removing image-one');
+    $('.image-one')[0].remove();
+  } else if ($('.image-two').length > 1) {
+    $('.image-two')[0].remove();
+  } else if ($('.image-three').length > 1) {
+    $('.image-three')[0].remove();
+  }
+}
