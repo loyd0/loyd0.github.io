@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.hidden {
+  display: none;
+}
+
+.content-text {
+  position: relative;
+  text-align: justify;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 200;
+  width: 45%;
+  margin: 20px;
+  bottom: 60px;
+  left: 60px;
+}
+
+.content-container {
+  position: relative;
+  display: block;
+  /*width: 80%;*/
+  padding: 1%;
+}
+
+.title-name {
+  top: 10%;
+  left: 39.5%;
+  position: fixed;
+  color: #f5f5f5;
+  font-size: 2.5em;
+  padding: 15px 20px;
+  border: solid #f5f5f5 3px;
+
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  min-width: 25%;
+  min-height: 100vh;
+  color: #F5F5F5;
+  font-size: 1.5em;
+  /*background-color: black;*/
+}
+
+.highlight {
+padding-left: 40px;
+text-align: left;
+display: flex;
+align-items: center;
+float: left;
+min-width: 100%;
+min-height: 100vh;
+color: #F5F5F5;
+font-size: 1.5em;
+/*background-color: black;*/
+}
+
+.transparent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: background 400ms; /* Safari */
+  -o-transition: background 400ms; /* Opera */
+  -moz-transition: background 400ms; /* Moz */
+  transition: background 400ms;*/
+}
+
+.transparent:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper {
+  min-width: 100%;
+}
+
+.image-one {
+  background-image: url('../imgs/code.png');
+  background-position: -260px;
+}
+.image-two {
+  background-image: url('../imgs/phones.png');
+  background-position: 34%;
+}
+.image-three {
+  background-image: url('../imgs/coast.png');
+  background-position: 72.5%;
+}
+.image-four {
+  background-image: url('../imgs/other.png');
+  background-position: 90%;
+}
+
+/* Other Images */
+
+.photography-image-wrapper {
+  display: inline-block;
+  width: 400px;
+  height: 220px;
+  z-index: 150;
+  margin-left: 10%;
+  text-align: center;
+}
+
+.photography-image-one {
+  background-image: url('../imgs/EventWM5.jpg');
+  background-size: cover;
+}
+.photography-image-two {
+  background-image: url('../imgs/PromotionalWM9.jpg');
+  background-size: cover;
+  background-position: 15px;
+}
+
+
+.contact-container {
+  bottom: 5%;
+  left: 40%;
+  position: fixed;
+  width: 20%;
+  text-align: center;
+  /*animation-name: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;*/
+}
+
+.arrow-down {
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 30px solid #f5f5f5;
+}
+
+.contact-arrow {
+  color: #f5f5f5;
+  font-size: 1.2em;
+  padding: 15px 20px
+}
+
+/* Social Media Logos*/
+.logos-wrapper {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  bottom: 50px;
+}
+.logos {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1); }
+  100% {transform: scale(1.2); }
+}
+@keyframes image-one-expand {
+  0% {background-position: -260px; min-width: 25%; }
+  100% {background-position: 0; min-width: 100%;}
+}
+@keyframes image-one-contract {
+  0% {background-position: 0; min-width: 100%;}
+  80% {background-position: -260px; min-width: 25%; }
+}
+@keyframes image-two-expand {
+  0% { min-width: 25%; left: 25%; }
+  100% { min-width: 100%; left: 0;
+  }
+}
+@keyframes image-two-contract {
+  0% {min-width: 100%; left: 0;}
+  100% {min-width: 25%; left: 25%;}
+}
+@keyframes image-three-expand {
+  0% { min-width: 25%; left: 50%; }
+  100% { min-width: 100%; left: 0;
+  }
+}
+@keyframes image-three-contract {
+  0% {min-width: 100%; left: 0;}
+  100% {min-width: 25%; left: 50%;}
+}
+@keyframes image-four-expand {
+  0% { min-width: 25%; }
+  100% { min-width: 100%;
+  }
+}
+@keyframes image-four-contract {
+  0% {min-width: 100%;}
+  100% {min-width: 25%; }
+}
+
+.animate-width-expand-one {
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  animation-name: image-one-expand;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.animate-width-contract-one {
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  animation-name: image-one-contract;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+.animate-width-expand-two {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  animation-name: image-two-expand;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.animate-width-contract-two {
+  position: absolute;
+  left: 25%;
+  z-index: 10;
+  animation-name: image-two-contract;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+.animate-width-expand-three {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  animation-name: image-three-expand;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.animate-width-contract-three {
+  position: absolute;
+  left: 25%;
+  z-index: 10;
+  animation-name: image-three-contract;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.animate-width-expand-four {
+  position: absolute;
+  right: 0;
+  animation-name: image-four-expand;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.animate-width-contract-four {
+  position: absolute;
+  right: 0;
+  animation-name: image-four-contract;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+.off-screen {
+  display: none;
+}
+
+
+/*Animate CSS Animation Alterations*/
+
+@-webkit-keyframes fadeOutQuick {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutQuick {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOutQuick {
+  -webkit-animation-name: fadeOutQuick;
+  animation-name: fadeOutQuick;
+  z-index: 1000;
+  animation-duration: 0.2s;
+}
