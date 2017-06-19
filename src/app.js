@@ -32,7 +32,7 @@ function init() {
     if (extended && !$(e.currentTarget).hasClass('disable-animation')) {
       $(e.currentTarget).removeClass('animate-width-expand-two');
       $(e.currentTarget).addClass('animate-width-contract-two');
-      $('.title-name').animateCssIn('fadeInDown');
+      $('.title-name').animateCssIn('fadeInDown', true);
       $('.column').addClass('disable-animation');
       $('.contact-container').animateCssIn('fadeIn');
       extended = false;
@@ -78,7 +78,7 @@ function init() {
     if (extended && !$(e.currentTarget).hasClass('disable-animation')) {
       $(e.currentTarget).removeClass('animate-width-expand-four');
       $(e.currentTarget).addClass('animate-width-contract-four');
-      $('.title-name').animateCssIn('fadeInDown');
+      $('.title-name').animateCssIn('fadeInDown', true);
       $('.column').addClass('disable-animation');
       $('.contact-container').animateCssIn('fadeIn');
       extended = false;
