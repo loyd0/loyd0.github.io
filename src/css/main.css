@@ -37,7 +37,8 @@ h1 {
   display: inline-block;
   width: 49%;
   /*padding: 1%;*/
-  top: 120px;
+  /*top: 120px;*/
+  float: left;
 }
 
 .content-container-four {
@@ -74,11 +75,11 @@ h1 {
 /*Terminal CSS*/
 
 .terminal {
-  margin-top: 7%;
+  /*margin-top: 7%;*/
   min-width: 60%;
   max-width: 80%;
-  margin-bottom: 100px;
-  margin-left: 15%;
+  /*margin-bottom: 100px;*/
+  margin-left: 10%;
   /*position: fixed;*/
 }
 
@@ -93,10 +94,6 @@ h1 {
 }
 
 .terminal-core {
-  position: relative;
-  display: block;
-  margin: 0;
-  height: 400px;
   background-color: black;
   padding-top: 20px;
 }
@@ -243,7 +240,7 @@ h1 {
   position: relative;
   margin: 0 auto;
   text-align: center;
-  bottom: 50px;
+  top: 20px;
 }
 .logos {
   width: 50px;
