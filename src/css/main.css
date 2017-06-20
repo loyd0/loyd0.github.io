@@ -37,6 +37,7 @@ h1 {
   display: inline-block;
   width: 49%;
   /*padding: 1%;*/
+  top: 120px;
 }
 
 .content-container-four {
@@ -44,6 +45,8 @@ h1 {
   display: inline-block;
   height: 200px;
   /*margin-top: 100px;*/
+  text-align: center;
+
 }
 .content-text-four {
   font-size: 1rem;
@@ -132,16 +135,16 @@ h1 {
 }
 
 .highlight {
-padding-left: 40px;
-text-align: left;
-display: flex;
-align-items: center;
-float: left;
-min-width: 100%;
-min-height: 100vh;
-color: #F5F5F5;
-font-size: 1.5em;
-/*background-color: black;*/
+  padding-left: 40px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  float: left;
+  min-width: 100%;
+  min-height: 100vh;
+  color: #F5F5F5;
+  font-size: 1.5em;
+  /*background-color: black;*/
 }
 
 .transparent {
@@ -246,6 +249,11 @@ font-size: 1.5em;
   width: 50px;
   height: 50px;
   margin-left: 15px;
+}
+.logos-code {
+  max-width: 50%;
+  max-height: 50%;
+  /*margin-left: 15px;*/
 }
 
 @keyframes pulse {
