@@ -235,6 +235,25 @@ h1 {
   padding: 15px 20px
 }
 
+/*Other-Page*/
+.content-text-other {
+  width: 100%;
+  font-size: 0.9rem;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.block-background {
+  margin: 0 auto;
+  width: 50%;
+  background-color: rgba(44, 58, 71, 0.4);
+}
+
+.spacer {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 /* Social Media Logos*/
 .logos-wrapper {
   position: relative;
