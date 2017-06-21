@@ -124,7 +124,7 @@ h1 {
 
 .ui-top {
 text-align: center;
-width: 80%;
+/*width: 80%;*/
 margin: 0 auto;
 }
 
@@ -137,10 +137,17 @@ margin: 0 auto;
 .ui-bottom {
   margin: 0 auto;
   text-align: center;
-  width: 80%;
+  /*width: 80%;*/
 }
 .ui-display {
-  border: 2px solid white;
+  /*border: 2px solid white;*/
+  max-width: 440px;
+  margin: 0 auto;
+  max-height: 600px;
+}
+#ui-display-img {
+  max-width: 440px;
+  max-height: 600px;
 }
 
 .column {

@@ -1,5 +1,6 @@
 $(init);
 function init() {
+  const designs = ['client-doctor-profile.jpg', 'inner-text.jpg', 'sports-app.png', 'tabbr.png', 'market-x.jpg'];
   let extended = false;
   $('.image-one').on('click', (e) => {
     if (extended && !$(e.currentTarget).hasClass('disable-animation')) {
@@ -50,6 +51,11 @@ function init() {
       $('#uiux').animateCssOut('fadeOut');
       setTimeout(function () {
         $('#appended-2').animateCssIn('fadeIn');
+        $('.ui-element').each(function(element){
+          $($('.ui-element')[element]).mouseover(function() {
+            $('#ui-display-img').attr('src', `src/imgs/${designs[element]}`);
+          });
+        });
       }, 900);
       extended = true;
     }
