@@ -18,7 +18,7 @@ h1 {
   position: relative;
   text-align: justify;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 200;
   width: 45%;
   margin: 20px;
@@ -101,10 +101,10 @@ h1 {
 
 .terminal-text {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
   /*margin-left: 40px;*/
   display: inline-block;
-  width: 80%;
+  width: 85%;
   float: right;
   margin-right: 10px;
 }
@@ -130,8 +130,8 @@ margin: 0 auto;
 
 .ui-text {
   margin: 0 auto;
-  font-size: 0.9rem;
-  width: 80%;
+  font-size: 0.8rem;
+  width: 70%;
   text-align: justify;
 }
 .ui-bottom {
@@ -268,11 +268,26 @@ margin: 0 auto;
 
 /*Other-Page*/
 .content-text-other {
-  width: 100%;
-  font-size: 0.9rem;
+  width: 65%;
+  font-size: 0.8rem;
   text-align: justify;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   font-weight: 200;
+  display: inline-block;
+
+}
+
+.responsive-wrapper {
+  position: relative;
+  bottom: 140px;
+  width: 100%;
+}
+
+.logos-wrapper-other {
+  text-align: center;
+  width: 35%;
+  float: right;
+  /*margin-top: 45px;*/
 }
 
 .block-background {
