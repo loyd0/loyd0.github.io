@@ -30,11 +30,15 @@ function init() {
 
   $('.image-two').on('click', (e) => {
     if (extended && !$(e.currentTarget).hasClass('disable-animation')) {
-      $(e.currentTarget).removeClass('animate-width-expand-two');
-      $(e.currentTarget).addClass('animate-width-contract-two');
-      $('.title-name').animateCssIn('fadeInDown', true);
-      $('.column').addClass('disable-animation');
-      $('.contact-container').animateCssIn('fadeIn');
+      setTimeout(function () {
+        $(e.currentTarget).removeClass('animate-width-expand-two');
+        $(e.currentTarget).addClass('animate-width-contract-two');
+        $('.title-name').animateCssIn('fadeInDown', false);
+        $('.column').addClass('disable-animation');
+        $('.contact-container').animateCssIn('fadeIn');
+        $('#uiux').animateCssIn('fadeIn', true);
+      }, 500);
+      $('#appended-2').animateCssOut('fadeOutQuick');
       extended = false;
     } else if (!extended && !$(e.currentTarget).hasClass('disable-animation')){
       $(e.currentTarget).removeClass('animate-width-contract-two');
@@ -43,6 +47,10 @@ function init() {
       $('.column').addClass('disable-animation');
       $('.contact-container').animateCssOut('fadeOutDown');
       $('<div class="image-two column"></div>').insertAfter('.image-one');
+      $('#uiux').animateCssOut('fadeOut');
+      setTimeout(function () {
+        $('#appended-2').animateCssIn('fadeIn');
+      }, 900);
       extended = true;
     }
   });

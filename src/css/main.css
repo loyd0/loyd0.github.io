@@ -39,6 +39,7 @@ h1 {
   /*padding: 1%;*/
   /*top: 120px;*/
   float: left;
+  box-sizing: border-box;
 }
 
 .content-container-four {
@@ -117,6 +118,29 @@ h1 {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+/*UI/UX*/
+
+.ui-top {
+text-align: center;
+width: 80%;
+margin: 0 auto;
+}
+
+.ui-text {
+  margin: 0 auto;
+  font-size: 0.9rem;
+  width: 80%;
+  text-align: justify;
+}
+.ui-bottom {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+.ui-display {
+  border: 2px solid white;
 }
 
 .column {
