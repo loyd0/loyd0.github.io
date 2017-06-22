@@ -15,21 +15,22 @@ h1 {
 }
 
 .content-text {
-  position: relative;
+  /*position: relative;*/
   text-align: justify;
-  display: inline-block;
+  /*display: inline-block;*/
   font-size: 0.8rem;
   font-weight: 200;
-  width: 45%;
-  margin: 20px;
-  bottom: 60px;
-  left: 60px;
+  width: 40%;
+  margin: 0 auto;
+  /*margin: 20px;*/
 }
 
 .content-container {
   position: relative;
   display: block;
   padding: 3%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .content-container-half {
@@ -126,6 +127,7 @@ h1 {
 text-align: center;
 /*width: 80%;*/
 margin: 0 auto;
+margin-top: 80px;
 }
 
 .ui-text {
@@ -224,15 +226,33 @@ margin: 0 auto;
   width: 400px;
   height: 220px;
   z-index: 150;
-  margin-left: 10%;
+  /*margin-left: 10%;*/
   text-align: center;
 }
 
+@media only screen and (max-width: 1350px) {
+  .photography-image-one {
+    clear: both;
+    float: none !important;
+  }
+  .photography-image-two {
+    clear: both;
+    float: none !important;
+  }
+  .content-text {
+    clear: both;
+    width: 65s%;
+  }
+}
+
 .photography-image-one {
+  float: right;
   background-image: url('../imgs/EventWM5.jpg');
   background-size: cover;
 }
 .photography-image-two {
+  float: left;
+  /*text-align: center;*/
   background-image: url('../imgs/PromotionalWM9.jpg');
   background-size: cover;
   background-position: 15px;
@@ -311,8 +331,8 @@ margin: 0 auto;
   position: relative;
   margin: 0 auto;
   text-align: center;
-  height: 70px;
-  top: 20px;
+  height: 110px;
+  /*top: 20px;*/
 }
 .logos {
   width: 50px;
@@ -324,6 +344,8 @@ margin: 0 auto;
   max-height: 50%;
   /*margin-left: 15px;*/
 }
+
+/*Animations*/
 
 @keyframes pulse {
   0% {transform: scale(1); }
