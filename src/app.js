@@ -41,7 +41,7 @@ function init() {
       }, 500);
       $('#appended-2').animateCssOut('fadeOutQuick');
       extended = false;
-    } else if (!extended && !$(e.currentTarget).hasClass('disable-animation')){
+    } else if (!extended && !$(e.currentTarget).hasClass('disable-animation')) {
       $(e.currentTarget).removeClass('animate-width-contract-two');
       $(e.currentTarget).addClass('animate-width-expand-two');
       $('.title-name').animateCssOut('fadeOutUp');
@@ -51,8 +51,8 @@ function init() {
       $('#uiux').animateCssOut('fadeOut');
       setTimeout(function () {
         $('#appended-2').animateCssIn('fadeIn');
-        $('.ui-element').each(function(element){
-          $($('.ui-element')[element]).mouseover(function() {
+        $('.ui-element').each(function (element) {
+          $($('.ui-element')[element]).mouseover(function () {
             $('#ui-display-img').attr('src', `src/imgs/${designs[element]}`);
           });
         });
@@ -119,7 +119,7 @@ function init() {
 $.fn.extend({
   animateCssOut: function (animationName) {
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    this.addClass('animated ' + animationName).one(animationEnd, function() {
+    this.addClass('animated ' + animationName).one(animationEnd, function () {
       $(this).removeClass('animated ' + animationName);
       $(this).addClass('off-screen');
       $('.column').removeClass('disable-animation');
@@ -130,7 +130,7 @@ $.fn.extend({
   animateCssIn: function (animationName, extensionBoolean) {
     $(this).removeClass('off-screen');
     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    this.addClass('animated ' + animationName).one(animationEnd, function() {
+    this.addClass('animated ' + animationName).one(animationEnd, function () {
       $(this).removeClass('animated ' + animationName);
       // $('.column').removeClass('animate-width-expand-one animate-width-contract-one animate-width-expand-four animate-width-contract-four animate-width-contract-two animate-width-expand-two animate-width-contract-three animate-width-expand-three3 off-screen disable-animation');
       $('.column').removeClass('animate-width-contract-one animate-width-contract-four animate-width-contract-two animate-width-contract-three off-screen disable-animation');
@@ -141,7 +141,7 @@ $.fn.extend({
   }
 });
 
-function removeExtension(){
+function removeExtension() {
   if ($('.image-one').length > 1) {
     console.log('removing image-one');
     $('.image-one')[0].remove();
